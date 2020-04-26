@@ -1,14 +1,17 @@
 <script>
+	import Logo from './logo.svelte';
 </script>
 
 <style>
 	main {
-		max-width: 240px;
-		height: 100%;
+		width: 240px;
 		margin: 0 auto;
-		display:flex;
-		flex-direction: column;
+		max-height: 99vh;
+		display:grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
 		justify-content: center;
+		align-content: center;
 		align-items: center;
 	}
 
@@ -20,9 +23,17 @@
 		font-family: 'Rubik Mono One', sans-serif;
 	}
 
+	.icons {
+		grid-row-start: 3;
+		justify-self: center;
+	}
+
 	.attribute-footer {
 		margin-top: 5em;
 		font-size: .6em;
+		align-self: flex-end;
+		grid-row-start: 4;
+		justify-self: center;
 	}
 	@media (min-width: 640px) {
 		main {
@@ -37,7 +48,7 @@
 </svelte:head>
 
 <main>
-	<h1>ALLCAPS.DEV</h1>
+	<Logo />
 	<span class="icons"><a href="https://github.com/ALLCAPSDEV"><img src="/icons8-github-50.svg" alt="Github"></a> <a href="https://www.npmjs.com/org/allcapsdev"><img src="/icons8-npm-50.svg" alt="NPMJS"></a></span>
 	<span class="attribute-footer"><a target="_blank" href="https://icons8.com/icons/set/github--v1">GitHub</a>, <a target="_blank" href="https://icons8.com/icons/set/npm">NPM</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a></span>
 </main>
