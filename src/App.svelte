@@ -1,11 +1,14 @@
 <script>
 	import Logo from './logo.svelte';
+	import {darkmode} from './store.js';
 	if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		console.log(window.matchMedia('(prefers-color-scheme: dark').matches)
-		window.document.body.classList.toggle('dark-mode')
+		window.document.body.classList.toggle('dark-mode');
+		console.log("WATUP!")
+		darkmode.update(v => !v)
 	}
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    window.document.body.classList.toggle('dark-mode')
+		window.document.body.classList.toggle('dark-mode');
+		darkmode.update(v => !v)
 	});
 </script>
 
