@@ -1,12 +1,31 @@
 <script>
 	import Logo from './logo.svelte';
+	import {darkmode} from './store.js';
+	if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		window.document.body.classList.toggle('dark-mode');
+		console.log("WATUP!")
+		darkmode.update(v => !v)
+	}
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+		window.document.body.classList.toggle('dark-mode');
+		darkmode.update(v => !v)
+	});
 </script>
 
 <style>
+	:global(body) {
+		background-color: #f2eee2;
+		color: #3f3f3f;
+		transition: background-color 0.3s
+	}
+	:global(body.dark-mode) {
+		background-color: #3f3f3f;
+		color: #f2eee2;
+	}
 	main {
 		width: 240px;
 		margin: 0 auto;
-		max-height: 99vh;
+		height: 99vh;
 		display:grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(4, 1fr);
