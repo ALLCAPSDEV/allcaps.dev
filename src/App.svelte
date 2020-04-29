@@ -1,7 +1,6 @@
 <script>
 	import Logo from './logo.svelte';
 	import {darkmode} from './store.js';
-
 	const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
 	if(matchMedia.matches) {
 		window.document.body.classList.toggle('dark-mode');
@@ -11,7 +10,6 @@
 		window.document.body.classList.toggle('dark-mode');
 		darkmode.update(v => !v)
 	});
-
 </script>
 
 <style>
