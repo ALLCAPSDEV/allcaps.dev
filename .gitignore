@@ -1,5 +1,5 @@
 /node_modules/
 /public/build/
-
+/public/dev/
 .DS_Store
 .firebase
