@@ -4,32 +4,43 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import autoPreprocess from 'svelte-preprocess';
+import html2 from 'rollup-plugin-html2'
+import crypto from 'crypto';
 
 const production = !process.env.ROLLUP_WATCH;
+let cssHash;
 
 export default {
 	input: 'src/main.js',
 	output: {
-		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		dir: 'public/build',
+		entryFileNames: 'bundle.[hash].js'
 	},
 	plugins: [
 		svelte({
 			dev: !production,
 			preprocess: autoPreprocess({
 				postcss: {
+					extract: true,
 					plugins: [require('autoprefixer')]
 				}
 			}),
-			css: css => {
-				css.write('public/build/bundle.css');
-			}
+			// css: css => {
+			// 	const sha256 = x => crypto.createHash('sha256').update(x, 'utf8').digest('hex');
+			// 	cssHash = sha256(css.code);
+			// 	css.write(`public/build/bundle.${cssHash}.css`, false)
+			// }
 		}),
 		resolve({
 			browser: true,
 			dedupe: ['svelte']
+		}),
+		html2({
+			template: './src/template.html',
+			fileName: 'index.html',
+			inject: 'head',
 		}),
 		commonjs(),
 
