@@ -1,15 +1,5 @@
 <script>
 	import Logo from './logo.svelte';
-	import {darkmode} from './store.js';
-	const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
-	if(matchMedia.matches) {
-		window.document.body.classList.toggle('dark-mode');
-		darkmode.update(v => !v)
-	}
-	matchMedia.addListener(e => {
-		window.document.body.classList.toggle('dark-mode');
-		darkmode.update(v => !v)
-	});
 </script>
 
 <style>
@@ -18,9 +8,12 @@
 		color: #3f3f3f;
 		transition: background-color 0.3s
 	}
-	:global(body.dark-mode) {
-		background-color: #3f3f3f;
-		color: #f2eee2;
+
+	@media (prefers-color-scheme: dark) {
+		:global(body) {
+			background-color: #3f3f3f;
+			color: #f2eee2;
+		}
 	}
 	main {
 		width: 240px;
