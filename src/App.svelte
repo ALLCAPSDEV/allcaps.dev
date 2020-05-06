@@ -27,14 +27,6 @@
 		align-items: center;
 	}
 
-	h1 {
-		color: #2836fc;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-		font-family: 'Rubik Mono One', sans-serif;
-	}
-
 	.icons {
 		grid-row-start: 3;
 		justify-self: center;
