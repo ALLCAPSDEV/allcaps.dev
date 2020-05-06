@@ -7,10 +7,11 @@
 		color: #3f3f3f;
 		transition: background-color 0.3s;
 		padding: .5em;
+		height: 100%;
 	}
 	main {
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
 		display:grid;
 		background-color: #f2eee2;
 		grid-template-columns: repeat(6,1fr);
@@ -18,11 +19,13 @@
 		grid-template-areas: 
 			"logo menu menu menu menu menu"
 			"logo content content content content content"
-			"x content content content content content"
+			". content content content content content"
 			"social content content content content content";
 		justify-content: center;
 		align-content: center;
 		align-items: center;
+		position: relative;
+		z-index: 1;
 	}
 
 	.icons {
@@ -79,6 +82,19 @@
 		position: absolute;
 	}
 
+	#shywu {
+		width: 18vw;
+		shape-outside: url('../shy.svg');
+		shape-margin: .6em;
+		float: right;
+		opacity: .4;
+
+	}
+
+	p {
+		text-align: justify;
+	}
+
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
@@ -104,7 +120,15 @@
 <main>
 	<img src="./logo.svg" id="logo" alt="ALLCAPS.DEV" />
 	<section id="content">
-		<h1>HOO-HAH!</h1>
+		<img src="../shy.svg" id="shywu" alt="The dev with the Wu-Tang tattoo" />
+		<p>Posuere eget de quinque elementa, ut quaeram magis supernae, feminae circum ambulant caelibe perpetitur, livin 'irrelevant, In summa benevolentia rex, communicatin 'per somnia, Mentis imaginibus depictum fuisse, Allah scriptor vidi et audivi, Undique per circuitum tuum atmosphaera, Troposphere, thermosphere, stratosphere, Potest te imaginari unum ex una idea, omnis visus hic, Meum intellectum facit veritatem, quae limpidissima, Tenementis predictis in clausum habitationi innocentes nigrum immigrantes, Illa octoginta quinque percent tenentium suorum animos welfare recipients, Quod suus 'esse videantur campi captivorum Stapleton, Et per noctem ambulo, tertia oculus et lucerna clara in via, Electric microbes, robotic rimatur, Telescope accipere imaginibus of globe, questus tur perforari microchips | RZA - Impossible</p>
+		<p>Io ego sum servus viri amplius quam aspera tabernus, Tirones, Im 'fuckin usque Regina militum Et solvas ipsius et stercore, dum allide, A ass mudhole in eo, ex causa me rectum in palude recumbat, Creepin 'in site, nunc autem suus' Fright noctem, Wu-Tang funda mihi arreptitium #bongbong periculi, Mortiferum et plus quam ictu securis, Choppin 'per vestri tergum swish, Givin, cordis impetus adstantes, Flip #bongbong conantur dic quis eum, Et succendam usque in #bongbong 'excipiatur prismate ita, ut agere de ea vitiosus terrorism, Et efficere volo, ut vilis est, et venit super tumultum! | GZA - Bring Da Ruckus</p>
+		<p>Quoniam ducti sunt in holocaustum de terra quae perierunt, Ecce equus pallidus semitis, Sequere me: Redditus est Wu-Tang, Quod optimum est quia Starks Clark, et Wallabees, African apes interfectorem blackwatch, In radio, blowin e io, Watts, Ex Hill Park, uada domum in montem, Omne tempus vobis est ambulate per vestri tergum ut gelidus, Lets cortices, qui volunt loqui artes ictus, Spit-sicut semi me ipso et craticulam, Cubito Deturpant, et cubitus locus, Infantem ludere mecum, et infantem cadere, ut butio, Pars convenitur, ad Apocalypsis numerare, Ego autem in #bongbong hott nikks transiet sacerdote pranderent | Method Man - Gravel Pit</p>
+		<p>Posuere eget de quinque elementa, ut quaeram magis supernae, feminae circum ambulant caelibe perpetitur, livin 'irrelevant, In summa benevolentia rex, communicatin 'per somnia, Mentis imaginibus depictum fuisse, Allah scriptor vidi et audivi, Undique per circuitum tuum atmosphaera, Troposphere, thermosphere, stratosphere, Potest te imaginari unum ex una idea, omnis visus hic, Meum intellectum facit veritatem, quae limpidissima, Tenementis predictis in clausum habitationi innocentes nigrum immigrantes, Illa octoginta quinque percent tenentium suorum animos welfare recipients, Quod suus 'esse videantur campi captivorum Stapleton, Et per noctem ambulo, tertia oculus et lucerna clara in via, Electric microbes, robotic rimatur, Telescope accipere imaginibus of globe, questus tur perforari microchips | RZA - Impossible</p>
+		<p>Io ego sum servus viri amplius quam aspera tabernus, Tirones, Im 'fuckin usque Regina militum Et solvas ipsius et stercore, dum allide, A ass mudhole in eo, ex causa me rectum in palude recumbat, Creepin 'in site, nunc autem suus' Fright noctem, Wu-Tang funda mihi arreptitium #bongbong periculi, Mortiferum et plus quam ictu securis, Choppin 'per vestri tergum swish, Givin, cordis impetus adstantes, Flip #bongbong conantur dic quis eum, Et succendam usque in #bongbong 'excipiatur prismate ita, ut agere de ea vitiosus terrorism, Et efficere volo, ut vilis est, et venit super tumultum! | GZA - Bring Da Ruckus</p>
+		<p>Quoniam ducti sunt in holocaustum de terra quae perierunt, Ecce equus pallidus semitis, Sequere me: Redditus est Wu-Tang, Quod optimum est quia Starks Clark, et Wallabees, African apes interfectorem blackwatch, In radio, blowin e io, Watts, Ex Hill Park, uada domum in montem, Omne tempus vobis est ambulate per vestri tergum ut gelidus, Lets cortices, qui volunt loqui artes ictus, Spit-sicut semi me ipso et craticulam, Cubito Deturpant, et cubitus locus, Infantem ludere mecum, et infantem cadere, ut butio, Pars convenitur, ad Apocalypsis numerare, Ego autem in #bongbong hott nikks transiet sacerdote pranderent | Method Man - Gravel Pit</p>
+		<p>Scelere crevit in latus lateri New York Times, Stayin 'non est vivere quinque, Quod secondhands Mom est scriptor mensuram palmae senem, Sic igitur ad hoc Shaolin terram, A puer adolescens, rockin io 'cum dente aurea: Ecce anseris aequabis, Tantum modo ut ne gettin 'quod off in G medicamento praedae irrumpunt; Et sic lets 'satus ut haec fili, Jules Revillout 'in hoc et in illo, Pullin 'pro fun de gats, Et factum est sicut somnium teen qui erat propter pe fende Coepi smokin woolas ad XVI, Et in portis faciens cursus' pervenit princeps consolida | Raekwon - C.R.E.A.M.</p>
+		<p>Loquens de diaboli, Psych! Nemo, quod est Deus, ut recte stercore, Mega trife: et io, vita praeterita mea in te occisus est, Dum est in vii kickin hoc jejunium stercore, Et reneged conatus iterum, et vento urente percussæ got, Dimidium-style passio dominatur, aut asinum: typho domi negotium ad insaniam convertunt, Quod percussit cum essem in persona Timbs et nigrum, Memento quod assis facis? Scio te non recordabor Jack, Noctem io fui Hittin tanquam rure vespertilionem, Et vos cogitastis de me bugged et amentes, Erat accinctus renes et ineptias post me factus est piger, Io, nemo quemquam fugio dum confodietur slugs | Ghostface Killah - Da Mystery of Chessboxin’</p>
 	</section>
 	<nav id="menu">
 		<h1>This is where the menu will be</h1>

@@ -25,7 +25,7 @@ export default {
 			}),
 			css: css => {
 				css.write('public/build/bundle.css');
-			}
+			},
 		}),
 		resolve({
 			browser: true,
