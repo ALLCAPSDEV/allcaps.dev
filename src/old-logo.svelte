@@ -1,5 +1,5 @@
 <script>
-  import { draw, fade } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import { onMount } from 'svelte';
   export let visible = false;
   onMount(() => {

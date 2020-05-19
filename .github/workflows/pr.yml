@@ -1,11 +1,8 @@
-on:
-  push:
-    branches:
-      - master
-name: Deploy Home to Firebase
+on: pull_request
+name: Test
 jobs:
-  deploy:
-    name: Deploy Home
+  tests:
+    name: Running the tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,10 +17,6 @@ jobs:
           node-version: 10.x
       - name: Install Deps if no cache
         if: steps.npm-cache.outputs.cache-hit != true
-        run: npm ci 
-      - name: Build Home
-        run: npm run build
-      - name: Deploy
-        run: npm install -g firebase-tools && firebase deploy
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: npm ci
+      - name: Execute the tests
+        run: npm test
