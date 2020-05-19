@@ -15,7 +15,6 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "prettier/prettier": "error",
-        "svelte3/lint-template": 2
+        "prettier/prettier": "error"
     }
 };
