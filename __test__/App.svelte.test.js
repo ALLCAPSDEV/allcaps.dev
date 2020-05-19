@@ -6,7 +6,6 @@ describe('App', () => {
   let subject
   beforeEach(() => {
     subject = render(App)
-    console.log(subject.getByTitle('ALLCAPS.dev Logo').className)
   })
   test('attribution is displayed', () => {
     expect(subject.getByText(/other icons by/)).toBeInTheDocument()
