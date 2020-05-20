@@ -1,6 +1,11 @@
 @font-face {
-	font-family: 'Arvo';
+	font-family: 'ArvoRegular';
 	src: url('./Arvo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ArvoBold';
+	src: url('./Arvo-Bold.ttf') format('truetype');
 }
 
 html, body {
@@ -13,7 +18,11 @@ body {
 	margin: 0;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: Arvo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: ArvoRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+strong {
+	font-family: ArvoBold;
 }
 
 a {

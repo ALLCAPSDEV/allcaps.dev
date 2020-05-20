@@ -4,6 +4,12 @@ module.exports = {
         "es6": true,
         "jest/globals": true
     },
+    "overrides": [
+        {
+            files: ['*.svelte'],
+            processor: 'svelte3/svelte3'
+        }
+    ],
     "plugins": ["svelte3", "prettier", "jest"],
     "extends": ["eslint:recommended", "prettier"],
     "globals": {
