@@ -1,6 +1,6 @@
 describe('Homepage', () => {
   it('Displays the logo', () => {
-    cy.visit('/')
-    cy.get('svg').should("be.visible");
+    cy.visit('/');
+    cy.get('[data-cy=main-logo]').should("be.visible");
   })
 })
