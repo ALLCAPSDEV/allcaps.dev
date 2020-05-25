@@ -1,8 +1,8 @@
 on: pull_request
 name: Test
 jobs:
-  tests:
-    name: Running the tests
+  unittests:
+    name: Running the unit tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{ runner.os }}-node${{ hashFiles('**/package-lock.json') }}
+          key: npm-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
@@ -20,3 +20,38 @@ jobs:
         run: npm ci
       - name: Execute the tests
         run: npm test
+  windowscypresstests:
+    name: Windows Cypress Tests
+    strategy:
+      matrix:
+        browser: ['chrome', 'edge', 'firefox', 'electron']
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Cypress tests for ${{ matrix.browser }} on Windows
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm run dev
+          wait-on: http://localhost:5000
+          browser: ${{ matrix.browser }}
+  othercypresstests:
+    name: Cypress Tests
+    strategy:
+      matrix:
+        browser: ['chrome', 'electron', 'firefox']
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Cypress tests for ${{ matrix.browser }} on ${{ matrix.os }}
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm run dev
+          wait-on: http://localhost:5000
+          browser: ${{ matrix.browser }}
