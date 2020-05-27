@@ -1,11 +1,8 @@
 <style>
   #menu {
     width: 100%;
-		border-top: 20px solid pink;
-		border-bottom: 5px solid pink;
-		border-image-source: url(./github.svg);
-		border-image-slice: 20 2;
-		border-image-repeat: round;
+		border-top: .2rem solid #f2eee2;
+		border-bottom: .2rem solid #f2eee2;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
