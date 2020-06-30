@@ -38,7 +38,7 @@
     "svelte-preprocess": "3.9.10"
   },
   "dependencies": {
-    "sirv-cli": "1.0.1"
+    "sirv-cli": "1.0.3"
   },
   "jest": {
     "transform": {
