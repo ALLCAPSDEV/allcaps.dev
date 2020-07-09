@@ -23,7 +23,7 @@
     "eslint-plugin-jest": "23.18.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-svelte3": "2.7.3",
-    "firebase-tools": "8.4.3",
+    "firebase-tools": "8.5.0",
     "jest": "26.1.0",
     "postcss": "7.0.32",
     "postcss-load-config": "2.1.0",
