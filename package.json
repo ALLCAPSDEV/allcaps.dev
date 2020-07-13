@@ -15,7 +15,7 @@
     "@rollup/plugin-node-resolve": "8.1.0",
     "@testing-library/jest-dom": "5.11.0",
     "@testing-library/svelte": "3.0.0",
-    "autoprefixer": "9.8.4",
+    "autoprefixer": "9.8.5",
     "cypress": "4.10.0",
     "eslint": "7.4.0",
     "eslint-config-prettier": "6.11.0",
