@@ -13,7 +13,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "14.0.0",
     "@rollup/plugin-node-resolve": "8.4.0",
-    "@testing-library/jest-dom": "5.11.1",
+    "@testing-library/jest-dom": "5.11.2",
     "@testing-library/svelte": "3.0.0",
     "autoprefixer": "9.8.5",
     "cypress": "4.11.0",
