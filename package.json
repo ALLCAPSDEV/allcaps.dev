@@ -16,7 +16,7 @@
     "@testing-library/jest-dom": "5.11.8",
     "@testing-library/svelte": "3.0.3",
     "autoprefixer": "10.1.0",
-    "cypress": "6.2.0",
+    "cypress": "6.2.1",
     "eslint": "7.17.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-cypress": "2.11.2",
