@@ -11,7 +11,7 @@
     "lint": "eslint \"{,(src,__test__)/**/}*.{js,svelte}\""
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "18.0.0",
+    "@rollup/plugin-commonjs": "19.0.1",
     "@rollup/plugin-node-resolve": "13.0.0",
     "@testing-library/jest-dom": "5.11.10",
     "@testing-library/svelte": "3.0.3",
